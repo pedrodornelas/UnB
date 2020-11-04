@@ -1,0 +1,31 @@
+#include <msp430.h>
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+
+	/*TA0CTL = TASSEL_1 | MC_1;
+	TA0CCR0 = 32767;
+	TA0CCTL4 = OUTMOD_6;
+	TA0CCR4 = 26214;
+
+	TA2CTL = TASSEL_1 | MC_1 |;
+	TA2CCR0 = 65535;
+	TA2CCTL5 = OUTMOD_6;
+	TA2CCR5 = 39321;*/
+
+	P4DIR |= BIT7;
+	P4SEL |= BIT7;
+	PMAPKEYID = 0X02D52;
+	P4MAP7=PM_TB0CCR1A;
+
+	TB0CTL = TASSEL_1 | MC_1 | ID_1;
+	TB0CCR0 = 52425;//10400
+	TB0CCTL1 = OUTMOD_6;
+	TB0CCR1 = 19659;//0
+	
+	while(1){
+	}
+
+	return 0;
+}
