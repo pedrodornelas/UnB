@@ -1,0 +1,8 @@
+*.tfrecord
+*.wav
+!audio_dataset_cortado/*
+!prediction/*
+__pycache__/*
+dataset_tfrecord/
+*hdf5
+./info_coletora.txt

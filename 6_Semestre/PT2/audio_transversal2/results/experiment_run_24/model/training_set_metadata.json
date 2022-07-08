@@ -1,0 +1,52 @@
+{
+    "audio_path": {
+        "feature_dim": 80,
+        "max_length": 999,
+        "preprocessing": {
+            "audio_feature": {
+                "num_filter_bands": 80,
+                "type": "fbank",
+                "window_length_in_s": 0.025,
+                "window_shift_in_s": 0.01
+            },
+            "audio_file_length_limit_in_s": 10.0,
+            "in_memory": true,
+            "missing_value_strategy": "backfill",
+            "norm": "per_file",
+            "padding_value": 0
+        },
+        "reshape": [
+            999,
+            80
+        ],
+        "sampling_rate_in_hz": 44100
+    },
+    "checksum": "k_87o8YCvSRaguZOQHHk8A==",
+    "data_train_hdf5_fp": "audio_dataset.training.hdf5",
+    "dataset_src": "audio_dataset.csv",
+    "label": {
+        "idx2str": [
+            "<UNK>",
+            "0",
+            "1"
+        ],
+        "preprocessing": {
+            "computed_fill_value": "<UNK>",
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "0": 278,
+            "1": 226,
+            "<UNK>": 0
+        },
+        "str2idx": {
+            "0": 1,
+            "1": 2,
+            "<UNK>": 0
+        },
+        "vocab_size": 3
+    }
+}

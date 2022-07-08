@@ -1,0 +1,5 @@
+Circuit: * C:\users\pedro\Meus Documentos\UnB\6_Semestre\lab-eletronica\experimento4\Draft1.asc
+
+Error on line 5 : l2 n004 n002 l
+	 Unknown parameter "l"
+Fatal Error: Missing inductance value for "L2"

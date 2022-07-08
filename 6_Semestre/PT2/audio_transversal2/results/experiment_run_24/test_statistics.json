@@ -1,0 +1,120 @@
+{
+    "combined": {
+        "loss": 0.45610758662223816
+    },
+    "label": {
+        "accuracy": 0.84112149477005,
+        "confusion_matrix": [
+            [
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                53,
+                8
+            ],
+            [
+                0,
+                9,
+                37
+            ]
+        ],
+        "hits_at_k": 1.0,
+        "loss": 0.45610758662223816,
+        "overall_stats": {
+            "avg_f1_score_macro": 0.837487715536496,
+            "avg_f1_score_micro": 0.8411214953271028,
+            "avg_f1_score_weighted": 0.8408943840901899,
+            "avg_precision_macro": 0.8385304659498207,
+            "avg_precision_micro": 0.8411214953271028,
+            "avg_precision_weighted": 0.8411214953271028,
+            "avg_recall_macro": 0.8366001425516749,
+            "avg_recall_micro": 0.8411214953271028,
+            "avg_recall_weighted": 0.8411214953271028,
+            "kappa_score": 0.6750044666785778,
+            "token_accuracy": 0.8411214953271028
+        },
+        "per_class_stats": {
+            "0": {
+                "accuracy": 0.8411214953271028,
+                "f1_score": 0.8617886178861789,
+                "fall_out": 0.19565217391304346,
+                "false_discovery_rate": 0.14516129032258063,
+                "false_negative_rate": 0.1311475409836066,
+                "false_negatives": 8,
+                "false_omission_rate": 0.1777777777777778,
+                "false_positive_rate": 0.19565217391304346,
+                "false_positives": 9,
+                "hit_rate": 0.8688524590163934,
+                "informedness": 0.6732002851033498,
+                "markedness": 0.6770609318996414,
+                "matthews_correlation_coefficient": 0.6751278489198757,
+                "miss_rate": 0.1311475409836066,
+                "negative_predictive_value": 0.8222222222222222,
+                "positive_predictive_value": 0.8548387096774194,
+                "precision": 0.8548387096774194,
+                "recall": 0.8688524590163934,
+                "sensitivity": 0.8688524590163934,
+                "specificity": 0.8043478260869565,
+                "true_negative_rate": 0.8043478260869565,
+                "true_negatives": 37,
+                "true_positive_rate": 0.8688524590163934,
+                "true_positives": 53
+            },
+            "1": {
+                "accuracy": 0.8411214953271028,
+                "f1_score": 0.8131868131868132,
+                "fall_out": 0.1311475409836066,
+                "false_discovery_rate": 0.1777777777777778,
+                "false_negative_rate": 0.19565217391304346,
+                "false_negatives": 9,
+                "false_omission_rate": 0.14516129032258063,
+                "false_positive_rate": 0.1311475409836066,
+                "false_positives": 8,
+                "hit_rate": 0.8043478260869565,
+                "informedness": 0.6732002851033498,
+                "markedness": 0.6770609318996414,
+                "matthews_correlation_coefficient": 0.6751278489198757,
+                "miss_rate": 0.19565217391304346,
+                "negative_predictive_value": 0.8548387096774194,
+                "positive_predictive_value": 0.8222222222222222,
+                "precision": 0.8222222222222222,
+                "recall": 0.8043478260869565,
+                "sensitivity": 0.8043478260869565,
+                "specificity": 0.8688524590163934,
+                "true_negative_rate": 0.8688524590163934,
+                "true_negatives": 53,
+                "true_positive_rate": 0.8043478260869565,
+                "true_positives": 37
+            },
+            "<UNK>": {
+                "accuracy": 1.0,
+                "f1_score": 0,
+                "fall_out": 0.0,
+                "false_discovery_rate": 1.0,
+                "false_negative_rate": 1.0,
+                "false_negatives": 0,
+                "false_omission_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "false_positives": 0,
+                "hit_rate": 0,
+                "informedness": 0.0,
+                "markedness": 0.0,
+                "matthews_correlation_coefficient": 0,
+                "miss_rate": 1.0,
+                "negative_predictive_value": 1.0,
+                "positive_predictive_value": 0,
+                "precision": 0,
+                "recall": 0,
+                "sensitivity": 0,
+                "specificity": 1.0,
+                "true_negative_rate": 1.0,
+                "true_negatives": 107,
+                "true_positive_rate": 0,
+                "true_positives": 0
+            }
+        }
+    }
+}

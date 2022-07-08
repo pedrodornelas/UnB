@@ -1,0 +1,25 @@
+Circuit: * C:\users\pedro\Meus Documentos\UnB\6_Semestre\lab-eletronica\experimento8\catraca_a.asc
+
+Limiting rise time of source v1 to 2e-005
+Limiting fall time of source v1 to 2e-005
+WARNING: Less than two connections to node N006.  This node is used by A1.
+WARNING: Less than two connections to node N002.  This node is used by A1.
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Oct 07 19:45:14 2021
+Total elapsed time: 0.066 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4978
+traniter = 4954
+tranpoints = 2026
+accept = 1791
+rejected = 235
+matrix size = 11
+fillins = 0
+solver = Normal
+Matrix Compiler1: 288 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: 683 bytes object code size  0.1/0.1/[0.1]
+
