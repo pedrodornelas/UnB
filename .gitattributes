@@ -1,3 +1,4 @@
 .wav filter=lfs diff=lfs merge=lfs -text
 6_Semestre/lab-eletronica/experimento6/parte1.raw filter=lfs diff=lfs merge=lfs -text
 6_Semestre/PT2/audio_transversal2/Miniconda3-py39_4.10.3-Linux-x86_64.sh filter=lfs diff=lfs merge=lfs -text
+7-Semestre/Redes-Sem-Fio/Livros/*.pdf filter=lfs diff=lfs merge=lfs -text
