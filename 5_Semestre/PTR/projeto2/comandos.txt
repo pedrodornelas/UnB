@@ -1,0 +1,337 @@
+- Configurações ROUTER R1:
+
+$ configure
+# set interfaces ethernet eth0 address dhcp
+# set interfaces ethernet eth1 address 172.24.8.49/28
+# set interfaces ethernet eth2 address 172.24.8.146/28
+# set interfaces ethernet eth3 address 172.24.8.129/28
+# set interfaces loopback lo address 10.1.1.1/32
+# set nat source rule 100 outbound-interface eth0
+# set nat source rule 100 source address 172.24.8.0/24
+# set nat source rule 100 translation address masquerade
+# set protocols ospf area 0 network 172.24.8.48/28
+# set protocols ospf area 0 network 172.24.8.128/28
+# set protocols ospf area 0 network 172.24.8.144/28
+# set protocols ospf default-information originate always
+# set protocols ospf default-information originate metric 10
+# set protocols ospf default-information originate metric-type 2
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.1.1.1
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# set protocols static route 0.0.0.0/0 next-hop 192.168.122.1
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R2:
+
+$ configure
+# set interfaces ethernet eth0 address 172.24.8.130/28
+# set interfaces ethernet eth1 address 172.24.8.66/28
+# set interfaces ethernet eth2 address 172.24.8.97/28
+# set interfaces ethernet eth3 address 172.24.8.113/28
+# set interfaces ethernet eth4 address 172.24.8.17/28
+# set interfaces loopback lo address 10.2.2.2/32
+# set protocols ospf area 0 network 172.24.8.128/28
+# set protocols ospf area 0 network 172.24.8.64/28
+# set protocols ospf area 0 network 172.24.8.96/28
+# set protocols ospf area 0 network 172.24.8.112/28
+# set protocols ospf area 0 network 172.24.8.16/28
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.2.2.2
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R3:
+$ configure
+# set interfaces ethernet eth0 address 172.24.8.1/28
+# set interfaces ethernet eth1 address 172.24.8.50/28
+# set interfaces ethernet eth2 address 172.24.8.81/28
+# set interfaces ethernet eth3 address 172.24.8.65/28
+# set interfaces loopback lo address 10.3.3.3/32
+# set protocols ospf area 0 network 172.24.8.80/28
+# set protocols ospf area 0 network 172.24.8.64/28
+# set protocols ospf area 0 network 172.24.8.48/28
+# set protocols ospf area 0 network 172.24.8.0/28
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.3.3.3
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R4:
+$ configure
+# set interfaces ethernet eth0 address 172.24.8.114/28
+# set interfaces ethernet eth1 address 172.24.8.145/28
+# set interfaces ethernet eth2 address 172.24.8.33/28
+# set interfaces loopback lo address 10.4.4.4/32
+# set protocols ospf area 0 network 172.24.8.112/28
+# set protocols ospf area 0 network 172.24.8.144/28
+# set protocols ospf area 0 network 172.24.8.32/28
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.4.4.4
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R5:
+$ configure
+# set interfaces ethernet eth0 address dhcp
+# set interfaces ethernet eth1 address 172.24.8.82/28
+# set interfaces ethernet eth2 address 172.24.8.98/28
+# set interfaces ethernet eth3 address 172.24.8.34/28
+# set interfaces loopback lo address 10.5.5.5/32
+# set nat source rule 100 outbound-interface eth0
+# set nat source rule 100 source address 172.24.8.0/24
+# set nat source rule 100 translation address masquerade
+# set protocols ospf area 0 network 172.24.8.80/28
+# set protocols ospf area 0 network 172.24.8.96/28
+# set protocols ospf area 0 network 172.24.8.32/28
+# set protocols ospf default-information originate always
+# set protocols ospf default-information originate metric 10
+# set protocols ospf default-information originate metric-type 2
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.5.5.5
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# set protocols static route 0.0.0.0/0 next-hop 192.168.122.1
+# commit
+# save
+# exit
+$ 
+
+- PC1:
+> ip 172.24.8.18/28 172.24.8.17
+> ip dns 8.8.8.8
+> save
+
+- PC2:
+> ip 172.24.8.2/28 172.24.8.1
+> ip dns 8.8.8.8
+> save
+
+----------  CONFIGURAÇÕES ADICIONAIS PARA DHCP --------------
+- ROUTER R2:
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 default-router 172.24.8.17
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 dns-server 8.8.8.8
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 domain-name vyos.net
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 lease 86400
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 range 0 start 172.24.8.18
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.16/28 range 0 stop 172.24.8.30
+
+
+- ROUTER R3:
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 default-router 172.24.8.1
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 dns-server 8.8.8.8
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 domain-name vyos.net
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 lease 86400
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 range 0 start 172.24.8.2
+# set service dhcp-server shared-network-name LAN subnet 172.24.8.0/28 range 0 stop 172.24.8.14
+
+------------------------------------------------------------
+- LOGIN UBUNTU:
+Username: gns3
+Password: gns3 | MD5: 435f15a54f7f673e302ad26f05226e0e
+
+
+- UBUNTU PC1:
+//Instalar iperf3:
+$ sudo wget -O /usr/lib/libiperf.so.0 https://iperf.fr/download/ubuntu/libiperf.so.0_3.1.3
+$ sudo wget -O /usr/bin/iperf3 https://iperf.fr/download/ubuntu/iperf3_3.1.3
+$ sudo chmod +x /usr/bin/iperf3
+
+
+- UBUNTU PC2:
+//Instalar iperf3:
+$ sudo wget -O /usr/lib/libiperf.so.0 https://iperf.fr/download/ubuntu/libiperf.so.0_3.1.3
+$ sudo wget -O /usr/bin/iperf3 https://iperf.fr/download/ubuntu/iperf3_3.1.3
+$ sudo chmod +x /usr/bin/iperf3
+
+
+2.
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s -i 10 -f K
+PC-A: $ iperf3 -c 172.24.8.5 -P 1 -i 10 -M -p 5001 -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s -i 10 -f K
+PC-B: $ iperf3 -c 172.24.8.21 -i 10 -M 160 -b 64000 -u -f K -t 60
+
+
+------------------------------------------------------------
+
+- No servidor(PC-B):
+sudo apt update && sudo apt install openvpn
+wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.4/EasyRSA-3.0.4.tgz
+tar xvf EasyRSA-3.0.4.tgz
+cd EasyRSA-3.0.4/
+./easyrsa init-pki
+./easyrsa gen-req server nopass
+sudo cp ~/EasyRSA-3.0.4/pki/private/server.key /etc/openvpn/
+scp ~/EasyRSA-3.0.4/pki/reqs/server.req gns3@172.24.8.6:/tmp
+sudo cp /tmp/{server.crt,ca.crt} /etc/openvpn/
+cd ~/EasyRSA-3.0.4/
+./easyrsa gen-dh
+openvpn --genkey --secret ta.key
+sudo cp ~/EasyRSA-3.0.4/ta.key /etc/openvpn/
+cd ~
+mkdir -p ~/client-configs/keys
+cd ~/EasyRSA-3.0.4/
+./easyrsa gen-req client1 nopass
+cp pki/private/client1.key ~/client-configs/keys/
+scp pki/reqs/client1.req gns3@172.24.8.6:/tmp
+cp /tmp/client1.crt ~/client-configs/keys/
+cp ~/EasyRSA-3.0.4/ta.key ~/client-configs/keys/
+sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
+sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/
+sudo gzip -d /etc/openvpn/server.conf.gz
+sudo nano /etc/openvpn/server.conf
+sudo nano /etc/sysctl.conf
+sudo sysctl -p
+ip route | grep default
+sudo nano /etc/ufw/before.rules
+sudo nano /etc/default/ufw
+sudo ufw allow 1194/udp
+sudo ufw allow OpenSSH
+sudo ufw disable
+sudo ufw enable
+sudo systemctl start openvpn@server
+sudo systemctl status openvpn@server
+ip addr show tun0
+sudo systemctl enable openvpn@server
+mkdir -p ~/client-configs/files
+cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/client-configs/base.conf
+nano ~/client-configs/base.conf (ip publico: 172.24.8.5)
+nano ~/client-configs/make_config.sh
+chmod 700 ~/client-configs/make_config.sh
+cd ~/client-configs
+sudo ./make_config.sh client1
+ls ~/client-configs/files
+
+- Na CA:
+wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.4/EasyRSA-3.0.4.tgz
+tar xvf EasyRSA-3.0.4.tgz
+cd ~/EasyRSA-3.0.4/
+cp vars.example vars
+nano vars
+./easyrsa init-pki
+cd EasyRSA-3.0.4/
+./easyrsa import-req /tmp/server.req server
+./easyrsa sign-req server server
+scp pki/issued/server.crt gns3@172.24.8.5:/tmp
+scp pki/ca.crt gns3@172.24.8.5:/tmp
+cd ~/EasyRSA-3.0.4/
+./easyrsa import-req /tmp/client1.req client1
+./easyrsa sign-req client client1
+scp pki/issued/client1.crt gns3@172.24.8.5:/tmp
+
+
+- PC-A:
+sudo apt update && sudo apt install openvpn
+sftp gns3@172.24.8.5:client-configs/files/client1.ovpn ~/
+nano client1.ovpn (descomentar 3 linhas a partir de security...)
+sudo openvpn --config client1.ovpn &
+
+------------------------------------------------------------------
+4.
+
+- PC-B:
+$ sudo ufw allow 5201
+
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s 10.8.0.1 -i 10 -f K
+PC-A: $ iperf3 -c 10.8.0.1 -P 1 -i 10 -M -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s 10.8.0.6 -i 10 -f K
+PC-B: $ iperf3 -c 10.8.0.6 -i 10 -M 160 -b 64000 -u -f K -t 60
+------------------------------------------------------------------
+5.
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s 10.8.0.1 -i 15 -f K
+PC-A: $ iperf3 -c 10.8.0.1 -P 1 -i 15 -M -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s 10.8.0.6 -i 15 -f K
+PC-B: $ iperf3 -c 10.8.0.6 -i 15 -M 160 -b 64000 -u -f K -t 60
+
+
+----------------------------------------------------------------
+APRESENTAÇÃO:
+
+2.
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s -i 10 -f K
+PC-A: $ iperf3 -c 172.24.8.5 -P 1 -i 10 -M -p 5001 -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s -i 10 -f K
+PC-B: $ iperf3 -c 172.24.8.21 -i 10 -M 160 -b 64000 -u -f K -t 60
+
+
+
+4.
+$ sudo openvpn --config client1.ovpn &
+
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s 10.8.0.1 -i 10 -f K
+PC-A: $ iperf3 -c 10.8.0.1 -P 1 -i 10 -M -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s 10.8.0.6 -i 10 -f K
+PC-B: $ iperf3 -c 10.8.0.6 -i 10 -M 160 -b 64000 -u -f K -t 60
+
+5.
+- Para transferir arquivos ftp:
+PC-B: $ iperf3 -s 10.8.0.1 -i 15 -f K
+PC-A: $ iperf3 -c 10.8.0.1 -P 1 -i 15 -M -w 8.0K -f K -t 60
+
+- Para transferir arquivos udp:
+PC-A: $ iperf3 -s 10.8.0.6 -i 15 -f K
+PC-B: $ iperf3 -c 10.8.0.6 -i 15 -M 160 -b 64000 -u -f K -t 60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

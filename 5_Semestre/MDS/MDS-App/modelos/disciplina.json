@@ -1,0 +1,22 @@
+{
+    "codigo": "ENE0056",
+    "nome":"SISTEMAS MICROPROCESSADOS",
+    "unidadeAcademica":{
+        "nome": "Departamento de Engenharia Elétrica",
+        "codigo": "ENE"
+    },
+    "cargaHoraria":{
+        "aulaTeorica":60,
+        "aulaPratica":0
+    },
+    "preRequisito":[
+        {
+            "codigo":"ENE0039",
+            "nome":"SISTEMAS DIGITAIS",
+            "unidadeAcademica":{
+                "nome": "Departamento de Engenharia Elétrica",
+                "codigo": "ENE"
+            }
+        }
+    ]
+}

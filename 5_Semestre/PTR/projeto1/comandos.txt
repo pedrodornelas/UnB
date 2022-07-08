@@ -1,0 +1,241 @@
+- Configurações ROUTER R1:
+
+$ configure
+# set interfaces ethernet eth5 address dhcp
+# set interfaces ethernet eth4 address 172.24.8.49/28
+# set interfaces ethernet eth3 address 172.24.8.146/28
+# set interfaces ethernet eth6 address 172.24.8.129/28
+# set interfaces loopback lo address 10.1.1.1/32
+# set nat source rule 100 outbound-interface eth5
+# set nat source rule 100 source address 172.24.8.0/24
+# set nat source rule 100 translation address masquerade
+# set protocols ospf area 0 network 172.24.8.48/28
+# set protocols ospf area 0 network 172.24.8.128/28
+# set protocols ospf area 0 network 172.24.8.144/28
+# set protocols ospf default-information originate always
+# set protocols ospf default-information originate metric 10
+# set protocols ospf default-information originate metric-type 2
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.1.1.1
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# set protocols static route 0.0.0.0/0 next-hop 192.168.122.1
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R2:
+
+$ configure
+# set interfaces ethernet eth7 address 172.24.8.130/28
+# set interfaces ethernet eth5 address 172.24.8.66/28
+# set interfaces ethernet eth4 address 172.24.8.97/28
+# set interfaces ethernet eth3 address 172.24.8.113/28
+# set interfaces ethernet eth6 address 172.24.8.17/28
+# set interfaces loopback lo address 10.2.2.2/32
+# set protocols ospf area 0 network 172.24.8.128/28
+# set protocols ospf area 0 network 172.24.8.64/28
+# set protocols ospf area 0 network 172.24.8.96/28
+# set protocols ospf area 0 network 172.24.8.112/28
+# set protocols ospf area 0 network 172.24.8.16/28
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.2.2.2
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R3:
+$ configure
+# set interfaces ethernet eth3 address 172.24.8.1/28
+# set interfaces ethernet eth5 address 172.24.8.50/28
+# set interfaces ethernet eth6 address 172.24.8.81/28
+# set interfaces ethernet eth4 address 172.24.8.65/28
+# set interfaces loopback lo address 10.3.3.3/32
+# set protocols ospf area 0 network 172.24.8.80/28
+# set protocols ospf area 0 network 172.24.8.64/28
+# set protocols ospf area 0 network 172.24.8.48/28
+# set protocols ospf area 0 network 172.24.8.0/28
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.3.3.3
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R4:
+$ configure
+# set interfaces ethernet eth4 address 172.24.8.114/28
+# set interfaces ethernet eth5 address 172.24.8.145/28
+# set interfaces ethernet eth3 address 172.24.8.33/28
+# set interfaces loopback lo address 10.4.4.4/32
+# set protocols ospf area 0 network 172.24.8.112/28
+# set protocols ospf area 0 network 172.24.8.144/28
+# set protocols ospf area 0 network 172.24.8.32/28
+# set protocols ospf default-information originate always
+# set protocols ospf default-information originate metric 10
+# set protocols ospf default-information originate metric-type 2
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.4.4.4
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# commit
+# save
+# exit
+$
+
+- Configuração ROUTER R5:
+$ configure
+# set interfaces ethernet eth3 address dhcp
+# set interfaces ethernet eth4 address 172.24.8.82/28
+# set interfaces ethernet eth5 address 172.24.8.98/28
+# set interfaces ethernet eth6 address 172.24.8.34/28
+# set interfaces loopback lo address 10.5.5.5/32
+# set nat source rule 100 outbound-interface eth3
+# set nat source rule 100 source address 172.24.8.0/24
+# set nat source rule 100 translation address masquerade
+# set protocols ospf area 0 network 172.24.8.80/28
+# set protocols ospf area 0 network 172.24.8.96/28
+# set protocols ospf area 0 network 172.24.8.32/28
+# set protocols ospf default-information originate always
+# set protocols ospf default-information originate metric 10
+# set protocols ospf default-information originate metric-type 2
+# set protocols ospf log-adjacency-changes
+# set protocols ospf parameters router-id 10.5.5.5
+# set protocols ospf redistribute connected metric-type 2
+# set protocols ospf redistribute connected route-map CONNECT
+# set policy route-map CONNECT rule 10 action permit
+# set policy route-map CONNECT rule 10 match interface lo
+# set protocols static route 0.0.0.0/0 next-hop 192.168.122.1
+# commit
+# save
+# exit
+$ 
+
+- PC1:
+> ip 172.24.8.18/28 172.24.8.17
+> ip dns 8.8.8.8
+> save
+
+- PC2:
+> ip 172.24.8.2/28 172.24.8.1
+> ip dns 8.8.8.8
+> save
+
+
+
+----------  CONFIGURAÇÕES ADICIONAIS PARA VLANS --------------
+
+1ª TENTATIVAS:
+
+- ROUTER R2:
+$ configure
+# set interfaces ethernet eth6 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth6 vif 10 address 172.24.10.3/24
+# set interfaces ethernet eth6 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth6 vif 20 address 172.24.20.3/24
+# set protocols ospf area 0 network 172.24.10.0/24
+# set protocols ospf area 0 network 172.24.20.0/24
+# commit
+# save
+
+- ROUTER R3:
+$ configure
+# set interfaces ethernet eth3 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth3 vif 10 address 172.24.10.1/24
+# set interfaces ethernet eth3 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth3 vif 20 address 172.24.20.1/24
+# set protocols ospf area 0 network 172.24.10.0/24
+# set protocols ospf area 0 network 172.24.20.0/24
+# commit
+# save
+
+- PC1:
+> ip 172.24.20.4/24 172.24.20.3
+> ip dns 8.8.8.8
+> save
+
+- PC2:
+> ip 172.24.10.2/24 172.24.10.1
+> ip dns 8.8.8.8
+> save
+
+
+2ª TENTATIVA:
+
+- ROUTER R2:
+$ configure
+# set interfaces ethernet eth6 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth6 vif 10 address 172.24.8.161/28
+# set interfaces ethernet eth6 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth6 vif 20 address 172.24.8.177/28
+# set protocols ospf area 0 network 172.24.8.160/28
+# set protocols ospf area 0 network 172.24.8.176/28
+# commit
+# save
+
+- ROUTER R3:
+$ configure
+# set interfaces ethernet eth3 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth3 vif 10 address 172.24.8.162/28
+# set interfaces ethernet eth3 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth3 vif 20 address 172.24.8.178/28
+# set protocols ospf area 0 network 172.24.8.160/28
+# set protocols ospf area 0 network 172.24.8.176/28
+# commit
+# save
+
+- PC1:
+> ip 172.24.8.163/28 172.24.8.161
+> ip dns 8.8.8.8
+> save
+
+- PC2:
+> ip 172.24.8.179/28 172.24.8.178
+> ip dns 8.8.8.8
+> save
+
+
+3ª TENTATIVA:
+
+- ROUTER R2:
+$ configure
+# set interfaces ethernet eth6 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth6 vif 10 address 172.24.8.161/28
+# set interfaces ethernet eth6 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth6 vif 20 address 172.24.8.177/28
+# set protocols ospf area 0 network 172.24.8.160/28
+# set protocols ospf area 0 network 172.24.8.176/28
+# commit
+# save
+
+- ROUTER R3:
+$ configure
+# set interfaces ethernet eth3 vif 10 description 'VLAN 10'
+# set interfaces ethernet eth3 vif 10 address 172.24.8.193/28
+# set interfaces ethernet eth3 vif 20 description 'VLAN 20'
+# set interfaces ethernet eth3 vif 20 address 172.24.8.209/28
+# set protocols ospf area 0 network 172.24.8.192/28
+# set protocols ospf area 0 network 172.24.8.208/28
+# commit
+# save
+
+
+
+
+
+
+

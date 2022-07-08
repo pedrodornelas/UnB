@@ -1,0 +1,35 @@
+{
+    "matricula": "180108042",
+    "nome": "Pedro Duarte Alvim",
+    "curso": {
+        "codigo": "X",
+        "nome": "ENGENHARIA DE REDES DE COMUNICAÇÃO"
+    },
+    "historicoAcademico": {
+        "ira": 4.5349,
+        "disciplinasAluno": [
+            {
+                "mencao": "SS",
+                "disciplina": {
+                    "codigo": "ENE0039",
+                    "nome": "Sistemas Digitais"
+                },
+                "periodoLetivo": {
+                    "ano": 2019,
+                    "numero": 1
+                }
+            },
+            {
+                "mencao": "SS",
+                "disciplina": {
+                    "codigo": "ENE0056",
+                    "nome": "Sistemas Microprocessados"
+                },
+                "periodoLetivo": {
+                    "ano": 2019,
+                    "numero": 2
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "codigo":"B",
+    "numeroVagas":40,
+    "numeroMatriculas":40,
+    "horarioAula":[
+        {
+            "dia":"SEG",
+            "hora":"8:00-9:50"
+        },
+        {
+            "dia":"QUA",
+            "hora":"8:00-9:50"
+        }
+    ],
+    "professor":[
+        {
+            "matricula":"XXXXXXXXX",
+            "nome":"RICARDO ZELENOVSCK",
+            "unidadeAcademica":{
+                "nome": "Departamento de Engenharia Elétrica",
+                "codigo": "ENE"
+            }
+        }
+    ],
+    "periodoLetivo":{
+        "ano":2019,
+        "numero":2
+    }
+}

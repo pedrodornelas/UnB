@@ -1,0 +1,404 @@
+[
+    {  
+        "nome": "SISMIC",
+        "codigo": "ENE0025", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "B",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "PROFESSOR X",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }
+        ]
+    },
+    {  
+        "nome": "Cálculo 1",
+        "codigo": "MAT0025", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "B",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "ADAIL",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }]
+    },
+    {  
+        "nome": "Cálculo 2",
+        "codigo": "MAT0026", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "GEORGES",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "B",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "JOSE EDIL",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }]
+    },
+    {  
+        "nome": "Cálculo 3",
+        "codigo": "MAT0027", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }]
+    },
+    {  
+        "nome": "MDS",
+        "codigo": "ENE0276", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 30,
+            "numeroMatriculas": 22,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "16:00-17:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"16:00-17:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "152439",
+                    "nome": "RICARDO STACIARINI PUTTINI",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }]
+    },
+    {  
+        "nome": "Física 1",
+        "codigo": "FIS0027", 
+        "turmas": [{
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "Demetrio",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "B",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "Demetrio",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "C",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "Demetrio",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "D",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "Demetrio",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        },
+        {
+            "codigo": "E",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "Demetrio",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }]
+    }
+]

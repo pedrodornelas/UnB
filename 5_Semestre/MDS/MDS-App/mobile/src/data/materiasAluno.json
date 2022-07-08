@@ -1,0 +1,140 @@
+[
+    {  
+        "nome": "MDS",
+        "codigo": "ENE0276", 
+        "status": "Pré-Matricula",
+        "turma": {
+            "codigo": "A",
+            "numeroVagas": 30,
+            "numeroMatriculas": 22,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "16:00-17:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"16:00-17:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "152439",
+                    "nome": "RICARDO STACIARINI PUTTINI",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2021,
+                "numero": 1
+            }
+        }
+    },
+    {
+        "codigo": "MAT0025",
+        "nome": "Cálculo 1",
+        "status": "Pré-Matricula",
+        "turma": {
+            "codigo": "A",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2019,
+                "numero": 2
+            }
+        }
+    },
+    {
+        "codigo": "MAT0026",
+        "nome": "Cálculo 2",
+        "status": "Pré-Matricula",
+        "turma": {
+            "codigo": "B",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2019,
+                "numero": 2
+            }
+        }
+    },
+    {
+        "codigo": "MAT0027",
+        "nome": "Cálculo 3",
+        "status": "Pré-Matricula",
+        "turma": {
+            "codigo": "C",
+            "numeroVagas": 40,
+            "numeroMatriculas": 40,
+            "horarioAula":[
+                {
+                    "dia": "SEG",
+                    "hora": "8:00-9:50"
+                },
+                {
+                    "dia": "QUA",
+                    "hora" :"8:00-9:50"
+                }
+            ],
+            "professor":[
+                {
+                    "matricula": "XXXXXXXXX",
+                    "nome": "RICARDO ZELENOVSCK",
+                    "unidadeAcademica": {
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    }
+                }
+            ],
+            "periodoLetivo":{
+                "ano": 2019,
+                "numero": 2
+            }
+        }
+    }
+    
+
+]

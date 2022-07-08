@@ -1,0 +1,52 @@
+{
+    "codigo": "X",
+    "nome": "ENGENHARIA DE REDES DE COMUNICAÇÃO",
+    "coordenador": {
+        "nome": "Daniel Guerreiro"
+    },
+    "cargaHorariaCurso": {
+        "obrigatorio": 2250,
+        "optativaMinima": 1500,
+        "complementarMinima": 0,
+        "minimaPeriodoLetivo": 120,
+        "periodosMinimos": 10,
+        "periodosMaximos": 20,
+        "periodos": 10
+    },
+    "fluxo": {
+        "disciplinas": [
+            {
+                "periodo": 2,
+                "tipo": "Obrigatório",
+                "disciplina": {
+                    "codigo":"ENE0039",
+                    "nome":"SISTEMAS DIGITAIS",
+                    "unidadeAcademica":{
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    },
+                    "cargaHoraria":{
+                        "aulaTeorica":60,
+                        "aulaPratica":0
+                    }
+                }
+            },
+            {
+                "periodo": 3,
+                "tipo": "Obrigatório",
+                "disciplina": {
+                    "codigo": "ENE0056",
+                    "nome":"SISTEMAS MICROPROCESSADOS",
+                    "unidadeAcademica":{
+                        "nome": "Departamento de Engenharia Elétrica",
+                        "codigo": "ENE"
+                    },
+                    "cargaHoraria":{
+                        "aulaTeorica":60,
+                        "aulaPratica":0
+                    }
+                }
+            }
+        ]
+    }
+}

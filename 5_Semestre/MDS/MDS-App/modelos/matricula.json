@@ -1,0 +1,67 @@
+{
+    "status":"Matriculado",
+    "turma":{
+        "codigo":"B",
+        "numeroVagas":40,
+        "numeroMatriculas":40,
+        "horarioAula":[
+            {
+                "dia":"SEG",
+                "hora":"8:00-9:50"
+            },
+            {
+                "dia":"QUA",
+                "hora":"8:00-9:50"
+            }
+        ],
+        "professor":[
+            {
+                "matricula":"XXXXXXXXX",
+                "nome":"RICARDO ZELENOVSCK",
+                "unidadeAcademica":{
+                    "nome": "Departamento de Engenharia Elétrica",
+                    "codigo": "ENE"
+                }
+            }
+        ],
+        "periodoLetivo":{
+            "ano":2019,
+            "numero":2
+        }
+    },
+    "aluno":{
+        "matricula": "180108042",
+        "nome": "Pedro Duarte Alvim",
+        "curso": {
+            "codigo": "X",
+            "nome": "ENGENHARIA DE REDES DE COMUNICAÇÃO"
+        },
+        "historicoAcademico": {
+            "ira": 4.5349,
+            "disciplinasAluno": [
+                {
+                    "mencao": "SS",
+                    "disciplina": {
+                        "codigo": "ENE0039",
+                        "nome": "Sistemas Digitais"
+                    },
+                    "periodoLetivo": {
+                        "ano": 2019,
+                        "numero": 1
+                    }
+                },
+                {
+                    "mencao": "SS",
+                    "disciplina": {
+                        "codigo": "ENE0056",
+                        "nome": "Sistemas Microprocessados"
+                    },
+                    "periodoLetivo": {
+                        "ano": 2019,
+                        "numero": 2
+                    }
+                }
+            ]
+        }
+    }
+}
