@@ -1,0 +1,54 @@
+Aluno: Pedro Henrique Dornelas Almeida
+Data: 20/04/2022
+
+Questão 1
+
+a)
+
+Podemos utilizar o teorema da probabilidade total para resolvermos esta questão. Pegando então as probabilidades de jobs para cada departamento:
+
+P(enc) = 0,1 
+P(enm) = 0,4
+P(ene) = 0,5
+
+Em seguida, podemos perceber também as probabilidades dos jobs serem multitarefas para cada departamento:
+
+P(multi|enc) = 0,02
+P(multi|enm) = 0,05
+P(multi|ene) = 0,01
+
+Podemos obter então do teorema da probabilidade total o seguinte:
+
+P(multi) = P(multi|enc)*P(enc) + P(multi|enm)*P(enm) + P(multi|ene)*P(ene)
+P(multi) = (0,02*0,1) + (0,05*0,4) + (0,01*0,5)
+P(multi) = 0,002 + 0,02 + 0,005 = 0,027
+
+b) 
+
+Podemos usar a Regra de Bayes para determinar:
+
+P(enm|multi) = P(multi|enm)*P(enm) / P(multi)
+P(enm|multi) = 0,05*0,4 / 0,027 = 0,7407
+
+
+Questão 2
+
+a)
+
+O tempo médio é dado por: 
+Tm = (3,8 + 4,5 + 2,5 + 3,9 + 3,2 + 4,2 + 3,3 + 3,7 + 5,5) / 9
+Tm = 34,6 / 9 = 3,8444
+
+b)
+
+Para encontrar o desvio padrão, primeiro vamos calcular a variância, pois:
+Desvio padrão = σ = sqrt(σ^2)
+Variância = σ^2
+
+Para encontrar a variância, devemos fazer:
+
+
+
+
+
+

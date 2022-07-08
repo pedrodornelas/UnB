@@ -1,0 +1,125 @@
+FEITO POR PEDRO HENRIQUE DORNELAS ALMEIDA
+ASSINATURA
+
+
+Questão 1
+
+Itens:
+1. V
+2. V
+3. F
+4. V
+5. V
+6. 
+7. V
+8. V
+9.
+10. V
+11. V
+12. F
+13. V
+14. F
+15. V
+16. V
+17. F
+18. F
+19. V
+20. F
+
+
+
+Questão 2
+
+É possível encontrar a capacidade máxima do sistema(C), por meio da banda passante do sistema e da relação sinal ruído existente(S/N), temos o princípio de shannon:
+
+C = B·log_2(1+S/N)
+
+Temos do sistema:
+
+B = 70MHz - 30MHz = 40MHz
+S/N = 48,165dB
+
+Porém, precisamos achar a S/N em escala linear, para isto:
+
+10·log_10(x) = 48,165
+log_10(x) = 4,8165
+x = 10^4,8165
+x = 65539,02
+
+Assim, podemos então encontrar a capacidade do sistema em bits por segundo:
+C = 40M·log_2(1+65539,02)
+C = 640,003Mbps
+
+
+Para descobrir quantos níveis são possíveis utilizando a codificação multinível, podemos fazer:
+M = sqrt_2(1+S/N)
+M = sqrt_2(1+65539,02)
+M = 256,0078
+
+Podem ser utilizados M = 256 níveis.
+
+
+
+Questão 3
+
+Para o tamanho mínimo do quadro 802.3:
+
+Mínimo 64 bytes = 512 bits
+
+Podemos encontrar a distância, transformando as unidades para bits e metros, por meio da seguinte relação:
+
+d = (tamanho-do-quadro · velocidade_de_propagação) / (taxa_de_transmissão)
+d = (512 · 200000 · 1000) / (500·10^6) 
+d = 204,80m
+
+
+
+Questão 4
+
+4.1 
+
+
+
+Questão 5
+
+Como a root bridge é definida no switch A, pelo BID(bridge ID). A partir disso, cada non-root bridge usa como informação a root bridge para definir quais de suas portas tem o caminho de menor custo até a root, essas são as root ports(RP), e no nosso exemplo, são designadas:
+RP = B esquerda, C esquerda, D cima, E cima, F cima, H cima, J esquerda. 
+
+Todas as outras bridges vão determinar qual das portas conectadas a outros enlaces tem o caminho de menor custo até a root bridge, assim, a bridge de menor custo é designada como designated bridge(DB), e suas portas como designated ports(DP), e então podemos encontrá-las:
+DP = A esquerda, A direita, B direita, C direita, D baixo, E baixo, F baixo, H baixo, J baixo.
+
+Por fim, podemos então descobrir as portas bloqueadas, tendo as root ports(RP) e as designated ports(DP), e encontramos:
+Portas bloqueadas = G esquerda, G direita, I esquerda, I direita, J direita.
+
+
+Questão 6
+
+Para encontrar a taxa de transmissão, usou-se como referência o slide 11 do slide sobre IEEE 802.11ac, assim o cálculo da taxa de transmissão se dá por:
+
+PHY Data Rate = Banda * Feixes Espaciais * Codificação * log_2(QAM) / Tempo OFDM
+((2*234)*(4)*(5/6)*log_2(256)) / 4*10^(-6) = 3.12Gbps
+
+
+
+Questão 7
+
+
+
+Questão 8
+
+Considerando as características informadas, é possível fazer:
+
+A perda no espaço livre é dada por = 21,98 - 20log(l) + 20log(d):
+l = c/5GHz = (3·10^8) / 5·10^(9) = 0,06m
+d = 500
+perda no espaço livre = 21,98 - 20log(0,06) + 20log(500)
+perda no espaço livre = 100,396dB
+
+
+Utilizando o balanço de potência podemos fazer:
+Cliente -> AP
+B = 0 + 18 + 
+
+
+
+
